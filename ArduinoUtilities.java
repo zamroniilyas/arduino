@@ -79,7 +79,7 @@ public class ArduinoUtilities implements SerialPortEventListener {
                 }
             }          
             
-            log+=getTanggal()+" | ArduinoUtilities sudah selesai mengecek port";
+            log+=getTanggal()+" | ArduinoUtilities sudah selesai mengecek port\n";
             window.textLog.setText(log);
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(null, e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
