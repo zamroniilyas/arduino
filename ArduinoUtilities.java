@@ -172,8 +172,9 @@ public class ArduinoUtilities implements SerialPortEventListener {
         try {
             outPut.write(a);
             outPut.flush();
-        } catch (IOException ex) {
-            //System.out.println("Kirim Gagal");
+        } catch (IOException | NullPointerException ex) {
+            log=ex.toString();
+            window.textRespon.setText(log);
         }
     }
     
