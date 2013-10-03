@@ -56,7 +56,7 @@ public class ArduinoUtilities implements SerialPortEventListener {
 
     
     public String getTanggal(){
-        Date date = DateUtility.getTanggal();
+        Date date = new Date();
         DateFormat df1 = DateFormat.getDateInstance(DateFormat.SHORT, new Locale("in", "ID"));    
         String tgl = df1.format(date)+" | "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
         
