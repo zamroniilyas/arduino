@@ -144,11 +144,11 @@ public class ArduinoUtilities implements SerialPortEventListener {
             outPut = serialPort.getOutputStream();
             
             log+=getTanggal()+" | ArduinoUtilities sedang mengkonfiguri arduino("+connectedPort+") dengan : \n"
-                +"Baud rate (Bits per second) : "+nilaiBaud+"\n"  
-                +"Data bits : "+nilaiData+"\n"  
-                +"Parity : "+nilaiStop+"\n" 
-                +"Stop bits : "+nilaiStop+"\n"
-                +"Flow Control : "+nilaiFlow+"\n";   
+                    +getTanggal()+" | Baud rate (Bits per second) : "+nilaiBaud+"\n"  
+                    +getTanggal()+" | Data bits : "+nilaiData+"\n"  
+                    +getTanggal()+" | Parity : "+nilaiStop+"\n" 
+                    +getTanggal()+" | Stop bits : "+nilaiStop+"\n"
+                    +getTanggal()+" | Flow Control : "+nilaiFlow+"\n"; 
             window.textLog.setText(log);
             
             serialPort.setSerialPortParams(nilaiBaud, nilaiData, nilaiStop, nilaiParity);
@@ -191,7 +191,7 @@ public class ArduinoUtilities implements SerialPortEventListener {
     
     public void initListener() {
         try {
-            log+=getTanggal()+" | ArduinoUtility sedang menambahkan listiner pada serialoPort ("+serialPort.getName()+")\n";
+            log+=getTanggal()+" | ArduinoUtility sedang menambahkan listiner pada serialoPort ("+connectedPort+")\n";
             window.textLog.setText(log);
             
             serialPort.addEventListener(this);
