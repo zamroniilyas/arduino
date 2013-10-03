@@ -3,13 +3,14 @@
  
 SoftwareSerial mySerial(7, 8);
  
-void setup()
-{
-  Serial.begin(19200);    // the GPRS baud rate 
+void setup(){
   Serial.println("Sedang mengkonfigurasi Arduino");
-  mySerial.begin(19200);  // the GPRS baud rate   
-  Serial.println("Sedang mengkonfigurasi Modem GSM Shield");
+  Serial.begin(19200);    // the GPRS baud rate 
 
+  Serial.println("Sedang mengkonfigurasi Modem GSM Shield");  
+  mySerial.begin(19200);  // the GPRS baud rate   
+
+  Serial.println("Board Arduino siap di gunakan");
   delay(500);
   
 }
