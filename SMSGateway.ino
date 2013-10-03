@@ -44,7 +44,7 @@ void SendTextMessage(){
     Serial.println("BoardArduino sedang mengiriim sms");
     mySerial.print("AT+CMGF=1\r");    //Because we want to send the SMS in text mode
     delay(100);
-    mySerial.println("AT + CMGS = \"+085748849890\"");//send sms message, be careful need to add a country code before the cellphone number
+    mySerial.println("AT + CMGS = \"+NOPE\"");//send sms message, be careful need to add a country code before the cellphone number
     delay(100);
     mySerial.println("A test message! jika terkirim mohon di bales");//the content of the message
     delay(100);
@@ -57,7 +57,7 @@ void SendTextMessage(){
 ///nelpon
 void DialVoiceCall(){
     Serial.println("BoardArduino sedang memanggil");    
-    mySerial.println("ATD +085748849890;");//dial the number
+    mySerial.println("ATD +NOPE;");//dial the number
     delay(100);
     mySerial.println();
     Serial.println("BoardArduino selesai memanggil");    
